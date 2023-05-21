@@ -1,1 +1,35 @@
-1
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>随机</title>
+</head>
+<body>
+<div id="inputs">
+<input type="text"> 
+<input type="text">
+<input type="text">  
+<input type="text">
+<input type="text">
+<input type="text">
+<input type="text">
+<input type="text">
+<input type="text">
+</div>
+<button id="random">随机</button>
+<div id="output"></div>
+
+<script>
+const inputs = document.querySelectorAll('#inputs input');
+const output = document.querySelector('#output');
+const button = document.querySelector('#random');
+
+function randomSelect() {
+  const index = Math.floor(Math.random() * inputs.length);
+  output.textContent = inputs[index].value;
+}
+
+button.addEventListener('click', randomSelect);
+</script>
+</body>
+</html>
